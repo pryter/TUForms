@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Prototype</title>
+    <link rel="stylesheet" href="css/uikit.min.css">
+    <script type="text/javascript" src="js/uikit.min.js"></script>
+    <script type="text/javascript" src="js/uikit-icons.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'IBMT';
+            src: url(fonts/IBMPlexSansThai-Medium.ttf);
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'IBMT-Exthin';
+            src: url(fonts/IBMPlexSansThai-Regular.ttf);
+        }
+        @font-face {
+            font-family: 'IBMT';
+            src: url(fonts/IBMPlexSansThai-SemiBold.ttf);
+            font-weight: bold;
+        }
+        @font-face {
+            font-family: 'IBMT-ExBold';
+            src: url(fonts/IBMPlexSansThai-Bold.ttf);
+        }
+        *{
+            font-family: IBMT,sans-serif !important;
+        }
+        .logo{
+            opacity: 0.53;
+        }
+        .round_button{
+            border-radius: 20px;
+            border-color: #F2A0CB;
+            color: #F2A0CB;
+        }
+        .uk-navbar-nav > *{
+            padding-left: 15px;
+        }
+        .bgvector{
+            width: 50%;
+            height: 50%;
+        }
+        .uk-input{
+            border-radius: 20px;
+            background-color: #E6E6E6;
+        }
+        .uk-input::placeholder{
+            font-size: 12px;
+            font-family: IBMT-Exthin,sans-serif;
+            color: #ACACAC;
+        }
+        .dsi{
+            font-family: IBMT-Exthin,sans-serif;
+            font-size: 10px;
+            color: #7A7A7A;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="uk-navbar-container uk-navbar-transparent uk-padding" uk-navbar>
+    <div class="uk-navbar-left">
+        <div class="uk-navbar-item uk-logo" style="max-width: 293px">
+            <img class="logo" src="images/TUCMC.png">
+        </div>
+    </div>
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav">
+            <li class="uk-visible@s"><a href="#">แนะนำชมรม</a></li>
+            <li class="uk-visible@s"><a href="#">รายละเอียด</a></li>
+            <li class="uk-visible@s"><a href="#">ติดต่อ</a></li>
+            <div class="uk-navbar-item uk-visible@m">
+                <a href="#" class="uk-button uk-button-default tm-button-default uk-icon round_button">สร้างบัญชี</a>
+            </div>
+            <li class="uk-hidden@s">
+                <a style="padding-left: 100px" href="#" uk-icon="icon: heart"></a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="uk-container uk-flex">
+    <img class="bgvector uk-visible@m" src="images/vector1.png">
+    <div class="uk-container uk-align-center uk-margin-auto-vertical">
+        <h3 style="font-weight: bold;color: #7A7A7A;text-align: center">ลงทะเบียนเข้าร่วมชมรม</h3>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="text" placeholder="เลขประจำตัวนักเรียน">
+            </div>
+        </div>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                <input class="uk-input" type="text" placeholder="รหัสผ่าน">
+            </div>
+        </div>
+        <div class="">
+            <a href="#" style="background-color: #F2A0CB;color: white!important;font-weight: bold" class="uk-button uk-button-default tm-button-default uk-icon round_button uk-width">เข้าสู่ระบบ</a>
+        </div>
+        <div class="uk-container uk-text-center" style="padding-top: 30px">
+            <a class="dsi">ลืมรหัสผ่าน</a> <span class="dsi">|</span> <a class="dsi">สร้าบัญชีใหม่</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
