@@ -106,12 +106,12 @@
 </div>
 <div class="uk-container uk-flex">
     <img class="bgvector uk-visible@m" src="images/vector1.png">
-    <div class="uk-container uk-align-center uk-margin-auto-vertical">
-        <h3 style="font-weight: bold;color: #7A7A7A;text-align: center;padding-left: 21px;padding-right: 21px">ลงทะเบียนเข้าร่วมชมรม</h3>
+    <div class="login-section uk-container uk-align-center uk-margin-auto-vertical uk-animation-slide-right-medium">
+        <h3 style="font-weight: bold;color: #7A7A7A;text-align: center;width: 276px">เข้าสู่ระบบสำหรับผู้ใช้งาน</h3>
         <div class="uk-margin uk-align-center">
             <div class="uk-inline" style="width: 100%">
                 <span class="uk-form-icon" uk-icon="icon: user"></span>
-                <input style="font-size: 13px" class="uk-input" type="text" placeholder="เลขประจำตัวนักเรียน">
+                <input style="font-size: 13px" class="uk-input" type="text" placeholder="ชื่อบัญชีผู้ใช้งาน">
             </div>
         </div>
         <div class="uk-margin uk-align-center">
@@ -124,9 +124,53 @@
             <a href="#" style="background-color: #F2A0CB;color: white!important;font-weight: bold" class="uk-button uk-button-default tm-button-default uk-icon round_button uk-width">เข้าสู่ระบบ</a>
         </div>
         <div class="uk-container uk-text-center" style="padding-top: 30px">
-            <a class="dsi">ลืมรหัสผ่าน</a> <span class="dsi">|</span> <a class="dsi">สร้าบัญชีใหม่</a>
+            <a class="dsi">ลืมรหัสผ่าน</a> <span class="dsi">|</span> <a class="dsi login-section" onclick="signup()">สร้างบัญชีใหม่</a> <a style="display: none;" class="dsi signup-section" onclick="login()">เข้าสู่ระบบ</a>
+        </div>
+    </div>
+    <div style="display: none;" class="signup-section uk-container uk-align-center uk-margin-auto-vertical uk-animation-slide-right-medium">
+        <h3 style="font-weight: bold;color: #7A7A7A;text-align: center;width: 276px">ลงทะเบียนบัญชีผู้ใช้งาน</h3>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline" style="width: 100%">
+                <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                <input style="font-size: 13px" class="uk-input" type="text" placeholder="อีเมล์">
+            </div>
+        </div>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline" style="width: 100%">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input style="font-size: 13px" class="uk-input" type="text" placeholder="ชื่อบัญชีผู้ใช้งาน">
+            </div>
+        </div>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline" style="width: 100%">
+                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                <input style="font-size: 13px" class="uk-input" type="password" placeholder="รหัสผ่าน">
+            </div>
+        </div>
+        <div class="uk-margin uk-align-center">
+            <div class="uk-inline" style="width: 100%">
+                <span class="uk-form-icon" uk-icon="icon: lock"></span>
+                <input style="font-size: 13px" class="uk-input" type="password" placeholder="ยืนยันรหัสผ่าน">
+            </div>
+        </div>
+        <div class="">
+            <a href="#" style="background-color: #F2A0CB;color: white!important;font-weight: bold" class="uk-button uk-button-default tm-button-default uk-icon round_button uk-width">เข้าสู่ระบบ</a>
+        </div>
+        <div class="uk-container uk-text-center" style="padding-top: 30px">
+            <a class="dsi">ลืมรหัสผ่าน</a> <span class="dsi">|</span> <a class="dsi login-section" onclick="signup()">สร้างบัญชีใหม่</a> <a style="display: none;" class="dsi signup-section" onclick="login()">เข้าสู่ระบบ</a>
         </div>
     </div>
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script>
+    function login(){
+        $(".signup-section").hide();
+        $(".login-section").show();
+    }
+    function signup(){
+        $(".login-section").hide();
+        $(".signup-section").show();
+    }
+</script>
 </html>
